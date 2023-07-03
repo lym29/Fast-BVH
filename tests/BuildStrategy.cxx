@@ -24,7 +24,7 @@ using FloatTypes = ::testing::Types<float, double, long double>;
 
 }  // namespace
 
-TYPED_TEST_CASE(BuildStrategyTest, FloatTypes);
+TYPED_TEST_SUITE(BuildStrategyTest, FloatTypes);
 
 TYPED_TEST(BuildStrategyTest, build) {
   Testing::Primitive<TypeParam> p[3] = {{{1, 2, 3}, {4, 5, 8}}, {{9, 8, 4}, {11, 15, 9}}, {{2, 6, 5}, {3, 7, 6}}};

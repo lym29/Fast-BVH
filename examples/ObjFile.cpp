@@ -199,7 +199,9 @@ class FaceIntersector final {
       uv[1] += vt2[1] * v;
     }
 
-    return FastBVH::Intersection<float, uint32_t>{t, &face_index, {0, 0, 1}, {uv[0], uv[1]}};
+    static uint32_t face_index_ = face_index;
+
+    return FastBVH::Intersection<float, uint32_t>{t, &face_index_, {0, 0, 1}, {uv[0], uv[1]}};
   }
 };
 

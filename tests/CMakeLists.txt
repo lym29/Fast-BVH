@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.1.3)
 find_package(GTest)
 
 if(NOT GTest_FOUND)
+  message("GTest Not Found")
   return()
 endif(NOT GTest_FOUND)
 
