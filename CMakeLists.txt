@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.1.3)
 
-set(CMAKE_CXX_STANDARD 14)
-
 set(gnu_cxxflags -Wall -Wextra -Werror -Wfatal-errors)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
@@ -14,4 +12,4 @@ endif((CMAKE_CXX_COMPILER_ID STREQUAL GNU) OR (CMAKE_CXX_COMPILER_ID MATCHES Cla
 
 add_library(FastBVH INTERFACE)
 
-target_include_directories(FastBVH INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_include_directories(FastBVH INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
